@@ -5,34 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
 
-    <!--
-    🎀 HELLO STUDENT! 🎀
-    This is your portfolio template!
-    - Change the colors in :root to make it YOURS
-    - Replace "Your Name" with your actual name
-    - Add your own projects, skills, and links
-    - The comments will guide you~
-    -->
-
     <style>
-        /* ============================================
-           🎨 CSS VARIABLES — Change these to customize!
-           ============================================ */
         :root {
-            --primary: #6C63FF;      /* Main color - buttons, links, highlights */
-            --primary-dark: #5A52D5; /* Darker shade for hover effects */
-            --bg: #0f0f1a;           /* Background color */
-            --bg-card: #1a1a2e;      /* Card/section background */
-            --text: #e0e0e0;         /* Main text color */
-            --text-muted: #a0a0b0;   /* Secondary text */
-            --border: #2a2a3e;       /* Border color */
-            --radius: 12px;          /* Rounded corners */
+            --primary: #6C63FF;      
+            --primary-dark: #5A52D5; 
+            --bg: #0f0f1a;           
+            --bg-card: #1a1a2e;      
+            --text: #e0e0e0;         
+            --text-muted: #a0a0b0;   
+            --border: #2a2a3e;       
+            --radius: 12px;          
             --shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
-        /* ============================================
-           🌟 RESET & BASE STYLES
-           ============================================ */
         * {
             margin: 0;
             padding: 0;
@@ -47,9 +32,6 @@
             min-height: 100vh;
         }
 
-        /* ============================================
-           🧭 NAVIGATION BAR
-           ============================================ */
         nav {
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
@@ -92,7 +74,6 @@
             color: var(--primary);
         }
 
-        /* Mobile menu button */
         .menu-toggle {
             display: none;
             background: none;
@@ -102,9 +83,7 @@
             cursor: pointer;
         }
 
-        /* ============================================
-           🦸 HERO SECTION
-           ============================================ */
+        /* 🦸 HERO SECTION */
         .hero {
             max-width: 1100px;
             margin: 0 auto;
@@ -181,9 +160,15 @@
             box-shadow: 0 0 60px rgba(108, 99, 255, 0.3);
         }
 
-        /* ============================================
-           📋 SECTIONS (About, Projects, Skills, Contact)
-           ============================================ */
+        .hero-avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        
+
+        /* 📋 SECTIONS */
         section {
             max-width: 1100px;
             margin: 0 auto;
@@ -209,7 +194,7 @@
             border-radius: 2px;
         }
 
-        /* About Section */
+        /* About */
         .about-content {
             display: flex;
             gap: 2rem;
@@ -300,7 +285,7 @@
             padding: 0.5rem 1.2rem;
         }
 
-        /* Skills Section */
+        /* Skills */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -333,7 +318,7 @@
             color: var(--text);
         }
 
-        /* Contact Section */
+        /* Contact */
         .contact-links {
             display: flex;
             gap: 1.5rem;
@@ -368,9 +353,6 @@
             margin-top: 4rem;
         }
 
-        /* ============================================
-           📱 RESPONSIVE DESIGN — Mobile friendly!
-           ============================================ */
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column-reverse;
@@ -387,9 +369,9 @@
                 max-width: 100%;
             }
 
-            .hero-avatar {
-                width: 180px;
-                height: 180px;
+            .hero-avatar img {
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
                 border-radius: 50%;
             }
@@ -435,9 +417,6 @@
 </head>
 <body>
 
-    <!-- ============================================
-         🧭 NAVIGATION — Change the links as needed!
-         ============================================ -->
     <nav>
         <div class="nav-inner">
             <a href="#" class="logo">✨ My Portfolio</a>
@@ -451,10 +430,7 @@
         </div>
     </nav>
 
-    <!-- ============================================
-         🦸 HERO — Your introduction!
-         Replace with YOUR name, role, and description
-         ============================================ -->
+    <!-- 🦸 HERO-intro -->
     <section class="hero">
         <div class="hero-text">
             <h1>Hi, I'm <span class="highlight">Keanu Sheeva Sulauman</span></h1>
@@ -468,15 +444,11 @@
             </div>
         </div>
         <div class="hero-avatar">
-            <img src="profile.jpg.jpeg">
+            <img src="./profile.jpg.jpeg">
         </div>
-        <!-- Change the emoji above to something that represents you!
-             Or replace with an <img> tag for your photo! -->
     </section>
 
-    <!-- ============================================
-         👤 ABOUT — Tell the world about yourself!
-         ============================================ -->
+    <!-- 👤 ABOUT -->
     <section id="about">
         <h2>About Me</h2>
         <div class="about-content">
@@ -505,17 +477,14 @@
         </div>
     </section>
 
-    <!-- ============================================
-         🚀 PROJECTS — Show off your work!
-         Add more project cards, or remove the examples
-         ============================================ -->
+    <!-- Projects -->
     <section id="projects">
         <h2>My Projects</h2>
         <div class="projects-grid" id="projectsGrid">
 
-            <!-- Project Card 1 — Replace with YOUR project! -->
+            <!-- Project Card 1 -->
             <div class="project-card">
-                <h3>Bebras Challenge</h3>
+                <h3>Top Score in Bebras Challenge</h3>
                 <p>An international computing competition designed to promote informatics and computational thinking among students.</p>
             </div>
 
@@ -527,9 +496,7 @@
         </div>
     </section>
 
-    <!-- ============================================
-         🛠️ SKILLS — What technologies do you know?
-         ============================================ -->
+    <!-- 🛠️ SKILLS -->
     <section id="skills">
         <h2>Skills & Hobbies</h2>
         <div class="skills-container">
@@ -566,9 +533,7 @@
     </section>
 
 
-    <!-- ============================================
-         📬 CONTACT — How can people reach you?
-         ============================================ -->
+    <!-- 📬 CONTACT -->
     <section id="contact">
         <h2>Get In Touch</h2>
         <div class="contact-links">
@@ -581,46 +546,29 @@
         </div>
     </section>
 
-    <!-- ============================================
-         📄 FOOTER
-         ============================================ -->
+    <!-- 📄 FOOTER -->
     <footer>
         <p>© <span id="currentYear">2026</span> Keanu Sheeva Sulauman — Built with 💜 and vanilla code</p>
     </footer>
 
-    <!-- ============================================
-         ⚡ JAVASCRIPT — Interactive features!
-         ============================================ -->
     <script>
-        // ============================================
-        // 🧭 Mobile Menu Toggle
-        // ============================================
+
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
 
-        // Close menu when a link is clicked (mobile)
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('navLinks').classList.remove('active');
             });
         });
 
-        // ============================================
-        // 📅 Auto-update copyright year
-        // ============================================
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // ============================================
-        // 🔢 Count projects automatically
-        // ============================================
         const projectCount = document.querySelectorAll('.project-card').length;
         document.getElementById('projectCount').textContent = projectCount;
 
-        // ============================================
-        // ✨ Smooth scroll for all anchor links
-        // ============================================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -631,9 +579,6 @@
             });
         });
 
-        // ============================================
-        // 🎉 Console welcome message!
-        // ============================================
         console.log('🚀 Welcome to my portfolio! Thanks for checking out the code~');
         console.log('💡 Tip: Change the CSS variables in :root to customize the colors!');
     </script>
